@@ -35,4 +35,5 @@ dependencies {
 
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'nl.dionsegijn:konfetti:1.1.3'
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
 }
