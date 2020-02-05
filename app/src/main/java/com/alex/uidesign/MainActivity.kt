@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.alex.uidesign.ui.BitcoinFindActivity
 import com.alex.uidesign.ui.FoodMenuActivity
+import com.alex.uidesign.ui.LottiesAnimationsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
@@ -32,11 +33,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         cvFoodMenu.setOnClickListener {
-            startActivity(Intent(MainActivity@this,FoodMenuActivity::class.java))
+            startActivity(Intent(this,FoodMenuActivity::class.java))
         }
 
         cvBitcoinFind.setOnClickListener {
-            startActivity(Intent(MainActivity@this,BitcoinFindActivity::class.java))
+            startActivity(Intent(this,BitcoinFindActivity::class.java))
+        }
+
+        cvLottieAnimations.setOnClickListener {
+            startActivity(Intent(this,LottiesAnimationsActivity::class.java))
         }
     }
 

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">uidesign</string>
+
+    <string name="esto_ha_sido_realiza">Esto ha sido realizado \ncon <b>Navigation Component</b> :D</string>
 </resources>

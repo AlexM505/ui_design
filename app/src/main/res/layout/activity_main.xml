@@ -66,7 +66,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="160dp"
             android:background="@drawable/bg">
 
             <nl.dionsegijn.konfetti.KonfettiView
@@ -192,11 +192,11 @@
                             android:fontFamily="@font/roboto_bold"
                             android:text="Food Menu"
                             android:textColor="#5E5E5E"
-                            android:textSize="18sp" />
+                            android:textSize="16sp" />
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:src="@drawable/foodmenu" />
@@ -228,11 +228,11 @@
                             android:fontFamily="@font/roboto_bold"
                             android:text="Bitcoin find"
                             android:textColor="#5E5E5E"
-                            android:textSize="18sp" />
+                            android:textSize="16sp" />
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="80dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:src="@drawable/bitcoincon" />
@@ -252,6 +252,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cvLottieAnimations"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -270,16 +271,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="test"
+                            android:text="Lottie Animations"
                             android:textColor="#5E5E5E"
-                            android:textSize="18sp" />
+                            android:textSize="16sp" />
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="80dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
-                            android:src="@drawable/convertible" />
+                            android:src="@drawable/lottie" />
 
                     </RelativeLayout>
 

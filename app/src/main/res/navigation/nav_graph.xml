@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/deliveryFragment">
+    <fragment
+        android:id="@+id/deliveryFragment"
+        android:name="com.alex.uidesign.ui.fragments.DeliveryFragment"
+        android:label="fragment_delivery"
+        tools:layout="@layout/fragment_delivery" >
+        <action
+            android:id="@+id/action_deliveryFragment_to_uploadFilesFragment"
+            app:destination="@id/uploadFilesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadFilesFragment"
+        android:name="com.alex.uidesign.ui.fragments.UploadFilesFragment"
+        android:label="fragment_upload_files"
+        tools:layout="@layout/fragment_upload_files" >
+        <action
+            android:id="@+id/action_uploadFilesFragment_to_byeFragment"
+            app:destination="@id/byeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/byeFragment"
+        android:name="com.alex.uidesign.ui.fragments.ByeFragment"
+        android:label="fragment_bye"
+        tools:layout="@layout/fragment_bye" />
+</navigation>
