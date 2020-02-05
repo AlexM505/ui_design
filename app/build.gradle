@@ -50,4 +50,5 @@ dependencies {
     implementation "androidx.navigation:navigation-ui:$nav_version"
     // For Kotlin use navigation-ui-ktx
 
+    implementation 'com.google.android.gms:play-services-vision:19.0.0'
 }

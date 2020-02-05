@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.alex.uidesign.ui.BitcoinFindActivity
 import com.alex.uidesign.ui.FoodMenuActivity
 import com.alex.uidesign.ui.LottiesAnimationsActivity
+import com.alex.uidesign.ui.ReaderQrActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
@@ -42,6 +43,10 @@ class MainActivity : AppCompatActivity() {
 
         cvLottieAnimations.setOnClickListener {
             startActivity(Intent(this,LottiesAnimationsActivity::class.java))
+        }
+
+        cvReaderQr.setOnClickListener {
+            startActivity(Intent(this,ReaderQrActivity::class.java))
         }
     }
 
