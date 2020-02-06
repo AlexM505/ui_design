@@ -51,4 +51,8 @@ dependencies {
     // For Kotlin use navigation-ui-ktx
 
     implementation 'com.google.android.gms:play-services-vision:19.0.0'
+
+    //mapa
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:8.6.2'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:0.5.0'
 }

@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.alex.uidesign">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.ReaderQrActivity"></activity>
+        <activity android:name=".ui.MapBoxActivity"></activity>
+        <activity android:name=".ui.ReaderQrActivity" />
         <activity android:name=".ui.LottiesAnimationsActivity" />
         <activity android:name=".ui.BitcoinFindActivity" />
         <activity android:name=".ui.FoodMenuActivity" />

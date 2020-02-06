@@ -5,10 +5,7 @@ import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.alex.uidesign.ui.BitcoinFindActivity
-import com.alex.uidesign.ui.FoodMenuActivity
-import com.alex.uidesign.ui.LottiesAnimationsActivity
-import com.alex.uidesign.ui.ReaderQrActivity
+import com.alex.uidesign.ui.*
 import kotlinx.android.synthetic.main.activity_main.*
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
@@ -47,6 +44,10 @@ class MainActivity : AppCompatActivity() {
 
         cvReaderQr.setOnClickListener {
             startActivity(Intent(this,ReaderQrActivity::class.java))
+        }
+
+        cvMapBox.setOnClickListener {
+            startActivity(Intent(this,MapBoxActivity::class.java))
         }
     }
 

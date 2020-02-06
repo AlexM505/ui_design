@@ -63,6 +63,7 @@ class ReaderQrActivity : AppCompatActivity() {
                 setupControls()
             }else{
                 Toast.makeText(applicationContext,"Permisos denegados",Toast.LENGTH_SHORT).show()
+                finish()
             }
         }
     }
