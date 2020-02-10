@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="?attr/backgroundColor"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,8 +20,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
             android:text="Dashboard"
-            android:textColor="@color/textDark"
+            android:textColor="?attr/text_color"
             android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,7 +55,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
         android:text="Presentacion"
-        android:textColor="@color/textDark"
+        android:textColor="?attr/text_color_dark"
         android:textSize="18sp" />
 
 
@@ -61,13 +63,13 @@
         android:id="@+id/cvPresentation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        app:cardCornerRadius="20dp">
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@color/cardview_dark_background">
+            android:background="?attr/card_background">
 
             <nl.dionsegijn.konfetti.KonfettiView
                 android:id="@+id/viewKonfetti"
@@ -75,25 +77,27 @@
                 android:layout_height="match_parent" />
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:alpha="0.6"
+                android:id="@+id/imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:src="@drawable/android"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/viewKonfetti" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/roboto_regular"
                 android:text="Android Developer"
-                android:textColor="#ffff"
+                android:textColor="?attr/text_color"
                 android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -103,7 +107,7 @@
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Alexander Marenco"
-                android:textColor="#ffff"
+                android:textColor="?attr/text_color"
                 android:textSize="22sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -118,7 +122,7 @@
                 android:paddingEnd="16dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Aqui podras ver algunos diseños de interfaces de usuario"
-                android:textColor="#ffff"
+                android:textColor="?attr/text_color"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -142,7 +146,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/roboto_medium"
             android:text="UI design"
-            android:textColor="@color/textDark"
+            android:textColor="?attr/text_color"
             android:textSize="18sp" />
 
         <View
@@ -168,7 +172,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvFoodMenu"
@@ -176,10 +182,11 @@
                     android:layout_height="120dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="2dp"
+                    app:cardElevation="4dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:backgroundTint="?attr/card_background">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -191,7 +198,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:text="Food Menu"
-                            android:textColor="#5E5E5E"
+                            android:textColor="?attr/text_color_dark"
                             android:textSize="16sp" />
 
                         <ImageView
@@ -212,10 +219,11 @@
                     android:layout_marginStart="18dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="2dp"
+                    app:cardElevation="4dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:backgroundTint="?attr/card_background">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -227,7 +235,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:text="Bitcoin find"
-                            android:textColor="#5E5E5E"
+                            android:textColor="?attr/text_color_dark"
                             android:textSize="16sp" />
 
                         <ImageView
@@ -248,7 +256,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
@@ -257,10 +267,11 @@
                     android:layout_height="120dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="2dp"
+                    app:cardElevation="4dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:backgroundTint="?attr/card_background">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -272,15 +283,15 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:text="Lottie Animations"
-                            android:textColor="#5E5E5E"
+                            android:textColor="?attr/text_color_dark"
                             android:textSize="16sp" />
 
                         <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
-                            android:src="@drawable/lottie" />
+                            android:src="@drawable/lottiee" />
 
                     </RelativeLayout>
 
@@ -293,10 +304,11 @@
                     android:layout_marginStart="18dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="2dp"
+                    app:cardElevation="4dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:backgroundTint="?attr/card_background">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -308,7 +320,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:text="Reader QR"
-                            android:textColor="#5E5E5E"
+                            android:textColor="?attr/text_color_dark"
                             android:textSize="16sp" />
 
                         <ImageView
@@ -329,8 +341,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
@@ -339,10 +353,11 @@
                     android:layout_height="120dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="2dp"
+                    app:cardElevation="4dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:backgroundTint="?attr/card_background">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -354,7 +369,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:text="Map Box"
-                            android:textColor="#5E5E5E"
+                            android:textColor="?attr/text_color_dark"
                             android:textSize="16sp" />
 
                         <ImageView
@@ -369,37 +384,39 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cvNightMode"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
                     android:layout_marginStart="18dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="2dp"
+                    app:cardElevation="4dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:backgroundTint="?attr/card_background">
 
-<!--                    <RelativeLayout-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_margin="10dp">-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
 
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:fontFamily="@font/roboto_bold"-->
-<!--                            android:text="test"-->
-<!--                            android:textColor="#5E5E5E"-->
-<!--                            android:textSize="18sp" />-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Modo nocturno"
+                            android:textColor="?attr/text_color_dark"
+                            android:textSize="18sp" />
 
-<!--                        <ImageView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="80dp"-->
-<!--                            android:layout_alignParentEnd="true"-->
-<!--                            android:layout_alignParentBottom="true"-->
-<!--                            android:src="@drawable/airport" />-->
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:src="@drawable/nightmode" />
 
-<!--                    </RelativeLayout>-->
+                    </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>
 

@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.MapBoxActivity"></activity>
+        <activity android:name=".ui.DarkModeActivity"></activity>
+        <activity android:name=".ui.MapBoxActivity" />
         <activity android:name=".ui.ReaderQrActivity" />
         <activity android:name=".ui.LottiesAnimationsActivity" />
         <activity android:name=".ui.BitcoinFindActivity" />

@@ -22,7 +22,7 @@ class ByeFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_bye, container, false)
 
-        view.btnNext.setOnClickListener { v ->
+        view.btnNext.setOnClickListener {
             this.activity!!.finish()
         }
 

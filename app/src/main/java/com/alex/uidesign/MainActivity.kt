@@ -4,8 +4,11 @@ import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.alex.uidesign.ui.*
+import com.alex.uidesign.utils.SaveData
 import kotlinx.android.synthetic.main.activity_main.*
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
@@ -14,11 +17,18 @@ import nl.dionsegijn.konfetti.models.Size
 class MainActivity : AppCompatActivity() {
 
     private val url = "https://github.com/AlexM505"
+    private lateinit var saveData: SaveData
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        saveData = SaveData(this)
+        if (saveData.loadDarkModeState() == true)
+            setTheme(R.style.darkTheme)
+        else
+            setTheme(R.style.AppTheme)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         cvPresentation.setOnClickListener {
             konfetti()
@@ -49,6 +59,10 @@ class MainActivity : AppCompatActivity() {
         cvMapBox.setOnClickListener {
             startActivity(Intent(this,MapBoxActivity::class.java))
         }
+
+        cvNightMode.setOnClickListener{
+            startActivity(Intent(this,DarkModeActivity::class.java))
+        }
     }
 
     private fun konfetti() {
@@ -64,5 +78,17 @@ class MainActivity : AppCompatActivity() {
             .burst(100)
 
 //            .streamFor(300, 5000L)
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+
+        restartApplication()
+    }
+
+    private fun restartApplication() {
+        val i = Intent(applicationContext,MainActivity::class.java)
+        startActivity(i)
+        finish()
     }
 }
