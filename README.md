@@ -20,19 +20,11 @@ Tecnologias y librerias utilizadas (y por utilizar):
 
 ### Diseño de la app
 
-<img src="screenshots/uidesign.png" alt=""> 
+<img src="screenshots/uidesign.jpg" alt=""> 
 
 ### Un poco de todo
 
-SharedPrefrences
-LiveData
-LifeCycle
-Intents
-Navigation Component (fragments)
-PermissionsManager | requestPermissions
-JSON
-XML
-Shape xml
+SharedPrefrences, LiveData, LifeCycle, Intents, Navigation Component (fragments), PermissionsManager | requestPermissions, JSON, XML, Shape xml
  
 ### Inspiración
 
@@ -45,7 +37,8 @@ https://google.com
 https://youtube.com
 
 
-[*Alexander Marenco*](https://github.com/AlexM505) Copyright (C) 2020
+
+### Realizado por [*Alexander Marenco*](https://github.com/AlexM505) Copyright (C) 2020
 
 
 

@@ -135,7 +135,7 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:fontFamily="@font/roboto_medium"
-                android:text="Aqui podras ver algunos diseños de interfaces de usuario"
+                android:text="Aqui podras ver algunos diseños de interfaces visuales"
                 android:textColor="?attr/text_color"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
