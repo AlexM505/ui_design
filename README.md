@@ -17,6 +17,7 @@ Tecnologias y librerias utilizadas (y por utilizar):
 8. ElasticViews
 9. Retrofit2
 10. Coroutines
+11. CircleImageView
 
 ### Diseño de la app
 
@@ -24,7 +25,7 @@ Tecnologias y librerias utilizadas (y por utilizar):
 
 ### Un poco de todo
 
-SharedPrefrences, LiveData, LifeCycle, Intents, Navigation Component (fragments), PermissionsManager | requestPermissions, JSON, XML, Shape xml
+SharedPrefrences, LiveData, LifeCycle, Intents, Navigation Component (fragments), PermissionsManager | requestPermissions, JSON, XML, Shape xml, NestedScrollView, CollapsingToolbarLayout
  
 ### Inspiración
 

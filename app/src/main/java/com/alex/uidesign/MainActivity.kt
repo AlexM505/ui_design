@@ -75,6 +75,10 @@ class MainActivity : AppCompatActivity() {
         cvNightMode.setOnClickListener{
             startActivity(Intent(this,DarkModeActivity::class.java))
         }
+
+        cvProfile.setOnClickListener {
+            startActivity(Intent(this,ProfileActivity::class.java))
+        }
     }
 
     private fun konfetti() {
