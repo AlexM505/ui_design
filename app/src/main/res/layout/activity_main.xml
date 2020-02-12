@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="8dp"
     android:background="?attr/backgroundColor"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginStart="4dp">
 
         <TextView
             android:id="@+id/textView2"
@@ -27,6 +28,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
+            android:id="@+id/view"
             android:layout_width="40dp"
             android:layout_height="6dp"
             android:layout_gravity="center"
@@ -37,6 +39,16 @@
             app:layout_constraintTop_toTopOf="parent">
 
         </View>
+
+        <ImageView
+            android:id="@+id/ivLinkedIn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/linkedin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/github"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/github"
@@ -56,14 +68,15 @@
         android:fontFamily="@font/roboto_regular"
         android:text="Presentacion"
         android:textColor="?attr/text_color_dark"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_marginStart="4dp"/>
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvPresentation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_margin="4dp"
         app:cardCornerRadius="12dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -101,6 +114,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -117,13 +131,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="12dp"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Aqui podras ver algunos diseños de interfaces de usuario"
                 android:textColor="?attr/text_color"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -137,7 +151,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
         android:orientation="horizontal">
 
         <TextView
@@ -170,19 +185,20 @@
 <!--            Fila 1-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="4dp"
                 android:orientation="horizontal"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp">
+                android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvFoodMenu"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp"
+                    app:cardElevation="2dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
@@ -216,10 +232,11 @@
                     android:id="@+id/cvBitcoinFind"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
-                    android:layout_marginStart="18dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp"
+                    app:cardElevation="2dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
@@ -255,11 +272,9 @@
 <!--            Fila 2-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:orientation="horizontal">
+                android:layout_height="140dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvLottieAnimations"
@@ -267,7 +282,9 @@
                     android:layout_height="120dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
@@ -301,10 +318,11 @@
                     android:id="@+id/cvReaderQr"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
-                    android:layout_marginStart="18dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp"
+                    app:cardElevation="2dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
@@ -340,20 +358,19 @@
 <!--            Fila 3-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:orientation="horizontal">
+                android:layout_height="140dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvMapBox"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp"
+                    app:cardElevation="2dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
@@ -387,10 +404,11 @@
                     android:id="@+id/cvNightMode"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
-                    android:layout_marginStart="18dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp"
+                    app:cardElevation="2dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"

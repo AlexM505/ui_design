@@ -9,6 +9,7 @@ import android.view.SurfaceHolder
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.util.isEmpty
 import androidx.core.util.isNotEmpty
 import com.alex.uidesign.R
 import com.google.android.gms.vision.CameraSource
@@ -95,7 +96,7 @@ class ReaderQrActivity : AppCompatActivity() {
 
         override fun receiveDetections(detections: Detector.Detections<Barcode>?) {
 
-            if(detections != null && detections.detectedItems.isNotEmpty()){
+            if(detections != null && detections.detectedItems.size() != 0){
                 val qrCodes: SparseArray<Barcode> = detections.detectedItems
                 val code = qrCodes.valueAt(0)
                 tvScanQrResult.text = code.displayValue

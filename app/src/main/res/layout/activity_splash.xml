@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_regular"
             android:text="Hecho con"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/textDark"
             android:textSize="14sp" />
 
         <com.airbnb.lottie.LottieAnimationView
@@ -61,7 +61,7 @@
             android:fontFamily="@font/roboto_regular"
             android:text="por Alexander Marenco"
             android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/textDark"
             android:textSize="14sp" />
 
         <ImageView

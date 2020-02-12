@@ -16,7 +16,8 @@ import nl.dionsegijn.konfetti.models.Size
 
 class MainActivity : AppCompatActivity() {
 
-    private val url = "https://github.com/AlexM505"
+    private val url_github = "https://github.com/AlexM505"
+    private val url_linkedin = "https://www.linkedin.com/in/alexander-marenco-17b130128"
     private lateinit var saveData: SaveData
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,12 +31,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        if (saveData.loadDarkModeState() == true)
+            github.setImageResource(R.drawable.git_orange)
+         else
+            github.setImageResource(R.drawable.git)
+
         cvPresentation.setOnClickListener {
             konfetti()
         }
 
         github.setOnClickListener {
-            val uri: Uri = Uri.parse(url)
+            val uri: Uri = Uri.parse(url_github)
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+
+        ivLinkedIn.setOnClickListener {
+            val uri: Uri = Uri.parse(url_linkedin)
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
         }
