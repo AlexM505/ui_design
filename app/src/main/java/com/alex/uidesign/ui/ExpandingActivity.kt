@@ -6,12 +6,14 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.alex.uidesign.R
 import com.diegodobelo.expandingview.ExpandingItem
 import com.diegodobelo.expandingview.ExpandingList
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_expanding.*
+import kotlinx.android.synthetic.main.expanding_bottom_sheet_dialog.*
+import kotlinx.android.synthetic.main.expanding_bottom_sheet_dialog.view.*
 
 class ExpandingActivity : AppCompatActivity() {
 
@@ -56,7 +58,14 @@ class ExpandingActivity : AppCompatActivity() {
             }
 
             item.findViewById<ImageView>(R.id.add_more_sub_items).setOnClickListener{
-                showInsertDialog(object : OnItemCreated {
+//                showInsertDialog(object : OnItemCreated {
+//                    override fun itemCreated(title: String) {
+//                        val newSubItem = item.createSubItem()
+//                        configureSubItem(item, newSubItem!!, title)
+//                    }
+//                })
+
+                showBottomSheetDialogInsert(object : OnItemCreated {
                     override fun itemCreated(title: String) {
                         val newSubItem = item.createSubItem()
                         configureSubItem(item, newSubItem!!, title)
@@ -86,6 +95,20 @@ class ExpandingActivity : AppCompatActivity() {
         }
         builder.setNegativeButton(android.R.string.cancel, null)
         builder.show()
+    }
+
+    private fun showBottomSheetDialogInsert(positive: OnItemCreated){
+        val view = layoutInflater.inflate(R.layout.expanding_bottom_sheet_dialog, null)
+        val dialog = BottomSheetDialog(this)
+        dialog.setContentView(view)
+        dialog.show()
+
+        view.btnAgregar.setOnClickListener {
+            positive.itemCreated(view.etItem.text.toString())
+            dialog.dismiss()
+        }
+
+        view.btnCancelar.setOnClickListener { dialog.dismiss() }
     }
 
     internal interface OnItemCreated {
