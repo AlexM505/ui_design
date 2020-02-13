@@ -4,8 +4,6 @@ import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.alex.uidesign.ui.*
 import com.alex.uidesign.utils.SaveData
@@ -77,7 +75,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         cvProfile.setOnClickListener {
-            startActivity(Intent(this,ProfileActivity::class.java))
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+
+        cvExpanding.setOnClickListener {
+            startActivity(Intent(this, ExpandingActivity::class.java))
         }
     }
 

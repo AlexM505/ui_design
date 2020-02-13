@@ -1,8 +1,9 @@
-package com.alex.uidesign
+package com.alex.uidesign.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import com.alex.uidesign.R
 import com.alex.uidesign.utils.SaveData
 import com.google.android.material.appbar.AppBarLayout
 import kotlinx.android.synthetic.main.activity_profile.*

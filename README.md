@@ -18,6 +18,7 @@ Tecnologias y librerias utilizadas (y por utilizar):
 9. Retrofit2
 10. Coroutines
 11. CircleImageView
+12. ExpandingView
 
 ### Diseño de la app
 
@@ -36,6 +37,8 @@ https://lottiefiles.com
 https://google.com
 
 https://youtube.com
+
+https://pinterest.com
 
 
 
