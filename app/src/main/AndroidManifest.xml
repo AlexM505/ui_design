@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.ExpandingActivity"/>
+        <activity android:name=".ui.ViewPager2Activity"></activity>
+        <activity android:name=".ui.ExpandingActivity" />
         <activity android:name=".ui.ProfileActivity" />
         <activity android:name=".ui.DarkModeActivity" />
         <activity android:name=".ui.MapBoxActivity" />

@@ -81,6 +81,10 @@ class MainActivity : AppCompatActivity() {
         cvExpanding.setOnClickListener {
             startActivity(Intent(this, ExpandingActivity::class.java))
         }
+
+        cvViewPager.setOnClickListener {
+            startActivity(Intent(this, ViewPager2Activity::class.java))
+        }
     }
 
 //    private fun konfetti() {
