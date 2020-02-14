@@ -84,10 +84,32 @@
             android:layout_height="150dp"
             android:background="?attr/card_background">
 
-            <nl.dionsegijn.konfetti.KonfettiView
-                android:id="@+id/viewKonfetti"
+<!--            <nl.dionsegijn.konfetti.KonfettiView-->
+<!--                android:id="@+id/viewKonfetti"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" />-->
+
+            <com.github.glomadrian.grav.GravView
+                android:id="@+id/grav"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                app:colorGenerator="com.github.glomadrian.grav.generator.paint.ArrayColorGenerator"
+                app:array_colors="@array/bubble"
+                app:pointGenerator="com.github.glomadrian.grav.generator.point.RegularPointGenerator"
+                app:regular_cell_size="300"
+                app:regular_variance="200"
+                app:gravGenerator="com.github.glomadrian.grav.generator.grav.BallGenerator"
+                app:ball_from_size="10dp"
+                app:ball_to_size="40dp"
+                app:animationGenerators="@array/BubbleAnimations"
+                app:side_to_side_min_duration="10000"
+                app:side_to_side_max_duration="10000"
+                app:side_to_side_direction="upToDown"
+                app:shake_direction="vertical"
+                app:shake_min_duration="10000"
+                app:shake_max_duration="20000"
+                app:shake_variance="400dp" />
 
             <ImageView
                 android:id="@+id/imageView"

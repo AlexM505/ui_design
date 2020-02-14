@@ -29,8 +29,10 @@ class DarkModeActivity : AppCompatActivity() {
         if(saveData.loadDarkModeState() == true) {
             sOnOffDark.isChecked = true
             ivWifi.setImageResource(R.drawable.ic_wifi_white_24dp)
+            ivSunMoon.setImageResource(R.drawable.ic_brightness_white_24dp)
         }else{
             ivWifi.setImageResource(R.drawable.ic_wifi_black_24dp)
+            ivSunMoon.setImageResource(R.drawable.ic_brightness_black_24dp)
         }
 
 

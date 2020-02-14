@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="bubble">
+        <item>#6BCA1D1D</item>
+        <item>#60E4C812</item>
+        <item>#6D00BCD4</item>
+        <item>#664504F7</item>
+        <item>#6AF74904</item>
+        <item>#79CA04F7</item>
+        <item>#6F31F704</item>
+        <item>#68C2F704</item>
+    </string-array>
+
+    <string-array name="BubbleAnimations">
+        <item>com.github.glomadrian.grav.generator.animation.SideToSideAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.ShakeAnimator</item>
+    </string-array>
+
+</resources>

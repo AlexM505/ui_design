@@ -34,9 +34,9 @@ class MainActivity : AppCompatActivity() {
          else
             github.setImageResource(R.drawable.git)
 
-        cvPresentation.setOnClickListener {
-            konfetti()
-        }
+//        cvPresentation.setOnClickListener {
+//            konfetti()
+//        }
 
         github.setOnClickListener {
             val uri: Uri = Uri.parse(url_github)
@@ -83,20 +83,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun konfetti() {
-        viewKonfetti.build()
-            .addColors(Color.CYAN, Color.YELLOW, Color.GREEN, Color.BLUE,Color.WHITE,Color.RED)
-            .setDirection(0.0, 359.0)
-            .setSpeed(1f, 5f)
-            .setFadeOutEnabled(true)
-            .setTimeToLive(2000L)
-            .addShapes(Shape.RECT, Shape.CIRCLE)
-            .addSizes(Size(12))
-            .setPosition(viewKonfetti.x + viewKonfetti.width / 2, viewKonfetti.y + viewKonfetti.height / 3)
-            .burst(100)
-
-//            .streamFor(300, 5000L)
-    }
+//    private fun konfetti() {
+//        viewKonfetti.build()
+//            .addColors(Color.WHITE, Color.YELLOW, Color.RED, Color.MAGENTA,Color.WHITE,Color.RED)
+//            .setDirection(0.0, 359.0)
+//            .setSpeed(1f, 5f)
+//            .setFadeOutEnabled(true)
+//            .setTimeToLive(2000L)
+//            .addShapes(Shape.RECT, Shape.CIRCLE)
+//            .addSizes(Size(12))
+//            .setPosition(viewKonfetti.x + viewKonfetti.width / 2, viewKonfetti.y + viewKonfetti.height / 3)
+//            .burst(100)
+//
+////            .streamFor(300, 5000L)
+//    }
 
     override fun onRestart() {
         super.onRestart()
